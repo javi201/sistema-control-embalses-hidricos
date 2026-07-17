@@ -30,6 +30,10 @@ public class Embalse {
         this.volAguaActual = volAguaActual;
     }
 
+    public Integer getIdentificador() {
+        return this.identificador;
+    }
+
     public Integer getVolAguaActual() {
         return this.volAguaActual;
     }
@@ -45,7 +49,5 @@ public class Embalse {
         this.volAguaActual -= volARestar;
     }
 
-    public Integer getIdentificador() {
-        return this.identificador;
-    }
+    
 }

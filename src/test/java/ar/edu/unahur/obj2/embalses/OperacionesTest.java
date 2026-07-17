@@ -10,7 +10,7 @@ import ar.edu.unahur.obj2.embalses.comando.Historial;
 import ar.edu.unahur.obj2.embalses.comando.Inyeccion;
 import ar.edu.unahur.obj2.embalses.excepciones.NivelDeSequiCriticaException;
 
-public class EmbalseTest {
+public class OperacionesTest {
     private Historial historial;
     private Embalse embalse;
 
