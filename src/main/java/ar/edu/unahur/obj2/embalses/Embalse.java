@@ -1,6 +1,10 @@
 package ar.edu.unahur.obj2.embalses;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import ar.edu.unahur.obj2.embalses.excepciones.NivelDeSequiCriticaException;
+import ar.edu.unahur.obj2.embalses.observer.Observador;
 
 /**
  * Embalse
@@ -8,6 +12,18 @@ import ar.edu.unahur.obj2.embalses.excepciones.NivelDeSequiCriticaException;
 public class Embalse {
     private Integer identificador;
     private Integer volAguaActual;
+
+    private List<Observador> observadores = new ArrayList<>();
+
+    public void agregarObservador(Observador obs) {
+        observadores.add(obs);
+    }
+
+    public void notificarObservadores() {
+        for(Observador obs : observadores) {
+            obs.actualizar();
+        }
+    }
 
     public Embalse(Integer identificador, Integer volAguaActual) {
         this.identificador = identificador;
