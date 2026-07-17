@@ -9,6 +9,11 @@ public class Embalse {
     private Integer identificador;
     private Integer volAguaActual;
 
+    public Embalse(Integer identificador, Integer volAguaActual) {
+        this.identificador = identificador;
+        this.volAguaActual = volAguaActual;
+    }
+
     public Integer getVolAguaActual() {
         return this.volAguaActual;
     }
