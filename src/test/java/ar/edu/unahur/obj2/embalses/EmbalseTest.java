@@ -15,21 +15,6 @@ public class EmbalseTest {
     private Embalse embalse;
 
     @Test
-    void testExtraerAgua() {
-
-    }
-
-    @Test
-    void testGetVolAguaActual() {
-
-    }
-
-    @Test
-    void testInyectarAgua() {
-
-    }
-
-    @Test
     void testInyectar() throws NivelDeSequiCriticaException {
         historial = new Historial();
         embalse = new Embalse(1, 100);
@@ -51,4 +36,16 @@ public class EmbalseTest {
 
         assertEquals(100, embalse.getVolAguaActual());
     }
+
+    @Test
+    void testExtraer() throws NivelDeSequiCriticaException {
+        historial = new Historial();
+        embalse = new Embalse(1, 200);
+
+        Comando extraccion = new Extraccion(embalse, 90);
+        historial.ejecutarComando(extraccion);
+
+        assertEquals(110, embalse.getVolAguaActual());
+    }
+    
 }
