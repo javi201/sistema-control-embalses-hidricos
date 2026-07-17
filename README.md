@@ -1,3 +1,7 @@
+Nombre y apellido: Javier Casco
+Comisión: 3
+DNI: 38946183
+
 ### **📝 Enunciado Adaptado: Sistema de Control de Embalses Hídricos (SCEH).**
 
 Una red nacional de gestión de aguas necesita implementar un sistema centralizado que permita registrar y controlar las operaciones de transferencia de agua en sus embalses. Además, el sistema debe permitir que componentes de monitoreo periféricos reaccionen automáticamente a las variaciones en el volumen de agua.
