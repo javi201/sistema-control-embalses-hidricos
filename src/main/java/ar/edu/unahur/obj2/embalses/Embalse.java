@@ -15,7 +15,10 @@ public class Embalse {
         this.volAguaActual += volAdicional;
     }
 
-    public void extraerAgua(Integer volARestar) {
+    public void extraerAgua(Integer volARestar) throws NivelDeSequiCriticaException {
+        if(this.volAguaActual - volARestar < -50) {
+            throw new NivelDeSequiCriticaException("El volumen estaría por debajo de -50 hm3");
+        }
         this.volAguaActual -= volARestar;
     }
 }
