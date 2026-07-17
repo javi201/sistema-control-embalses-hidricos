@@ -1,4 +1,7 @@
-package ar.edu.unahur.obj2.embalses;
+package ar.edu.unahur.obj2.embalses.comando;
+
+import ar.edu.unahur.obj2.embalses.Embalse;
+import ar.edu.unahur.obj2.embalses.excepciones.NivelDeSequiCriticaException;
 
 public class Inyeccion implements Comando {
     private Embalse embalse;

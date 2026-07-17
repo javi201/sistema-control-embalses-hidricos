@@ -1,12 +1,14 @@
-package ar.edu.unahur.obj2.embalses;
+package ar.edu.unahur.obj2.embalses.comando;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import ar.edu.unahur.obj2.embalses.excepciones.NivelDeSequiCriticaException;
+
 public class Historial {
     private List<Comando> historial = new ArrayList<>();
 
-    public void ejecutarComando(Comando comando) {
+    public void ejecutarComando(Comando comando) throws NivelDeSequiCriticaException {
         comando.ejecutar();
         historial.add(comando);
     }

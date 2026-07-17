@@ -1,5 +1,7 @@
 package ar.edu.unahur.obj2.embalses;
 
+import ar.edu.unahur.obj2.embalses.excepciones.NivelDeSequiCriticaException;
+
 /**
  * Embalse
  */
