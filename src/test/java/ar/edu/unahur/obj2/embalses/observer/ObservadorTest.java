@@ -1,8 +1,12 @@
 package ar.edu.unahur.obj2.embalses.observer;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
+
 import org.junit.jupiter.api.Test;
 
 import ar.edu.unahur.obj2.embalses.Embalse;
+import ar.edu.unahur.obj2.embalses.excepciones.NivelDeSequiCriticaException;
 
 public class ObservadorTest {
     private Embalse embalse;
@@ -10,8 +14,8 @@ public class ObservadorTest {
     private AlarmaSequia alarmaSequia;
 
     @Test
-    void test() {
-        embalse = new Embalse(2, 20);
+    void testNoLanzarExcepcion() {
+        embalse = new Embalse(2, 100);
         regCentralAuditoria = new RegCentralAuditoria();
         alarmaSequia = new AlarmaSequia();
 
@@ -19,8 +23,10 @@ public class ObservadorTest {
         embalse.agregarObservador(regCentralAuditoria);
 
         try {
-            embalse.extraerAgua(30);
-            
+            embalse.extraerAgua(10);
+            assertEquals(90, embalse.getVolAguaActual());
+        } catch (NivelDeSequiCriticaException e) {
+            fail("Prueba");
         }
 
 
