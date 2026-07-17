@@ -21,7 +21,7 @@ public class Embalse {
 
     public void notificarObservadores() {
         for(Observador obs : observadores) {
-            obs.actualizar();
+            obs.actualizar(this);
         }
     }
 
@@ -43,5 +43,9 @@ public class Embalse {
             throw new NivelDeSequiCriticaException("El volumen estaría por debajo de -50 hm3");
         }
         this.volAguaActual -= volARestar;
+    }
+
+    public Integer getIdentificador() {
+        return this.identificador;
     }
 }
